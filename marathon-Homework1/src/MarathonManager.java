@@ -4,13 +4,13 @@ public class MarathonManager {
     public int first(Marathon marathon) {
         int[] scores = marathon.getScores();
         int min = scores[0];
-        for (int score : scores) {  //1. olan kisinin skorunu bulur
+        for (int score : scores) { // 1. olan kisinin skorunu bulur
             if (score < min)
                 min = score;
         }
 
         int i = 0;
-        for (i = 0; i < 16; i++) {  //1. olan kisinin dizideki konumunu bulur
+        for (i = 0; i < 16; i++) { // 1. olan kisinin dizideki konumunu bulur
             if (scores[i] == min) {
                 break;
             }
@@ -25,7 +25,7 @@ public class MarathonManager {
         MarathonManager marathonManager = new MarathonManager();
         int first = marathonManager.first(marathon);
 
-        for (int i = 0; i < 16; i++) {  //2. olan kisinin skorunu bulur
+        for (int i = 0; i < 16; i++) { // 2. olan kisinin skorunu bulur
             if (i == first) {
                 continue;
             }
@@ -35,7 +35,7 @@ public class MarathonManager {
         }
 
         int i = 0;
-        for (i = 0; i < 16; i++) {  //2. olan kisinin dizideki konumunu bulur
+        for (i = 0; i < 16; i++) { // 2. olan kisinin dizideki konumunu bulur
             if (scores[i] == min) {
                 break;
             }
@@ -52,7 +52,7 @@ public class MarathonManager {
         int first = marathonManager.first(marathon);
         int second = marathonManager.second(marathon);
 
-        for (int i = 0; i < 16; i++) { //3. olan kisinin skorunu bulur
+        for (int i = 0; i < 16; i++) { // 3. olan kisinin skorunu bulur
             if (i == first) {
                 continue;
             }
@@ -65,8 +65,8 @@ public class MarathonManager {
                 min = scores[i];
         }
 
-        int i=0;
-        for (i = 0; i < 16; i++) { //3. olan kisinin dizideki konumunu bulur
+        int i = 0;
+        for (i = 0; i < 16; i++) { // 3. olan kisinin dizideki konumunu bulur
             if (scores[i] == min) {
                 break;
             }

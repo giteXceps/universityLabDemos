@@ -9,7 +9,7 @@ public class App {
 
         int first = marathonManager.first(cuMarathon);
         System.out.println("Birinci: " + names[first] + " " + scores[first] + "'");
-        
+
         int second = marathonManager.second(cuMarathon);
         System.out.println("Ikinci:  " + names[second] + " " + scores[second] + "'");
 
