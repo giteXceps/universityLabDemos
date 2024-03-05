@@ -10,8 +10,7 @@ public class Customer {
     }
 
     public Customer(String email, String name) {
-        this.email = email;
-        this.name = name;
+        this(email,name,0.0);
     }
 
     public String getEmail() {
