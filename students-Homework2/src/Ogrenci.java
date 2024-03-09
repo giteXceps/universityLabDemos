@@ -69,7 +69,7 @@ public class Ogrenci {
         return dersSayisi*20;
     }
 
-    // okulu uzatanlar icin harc hesaplayan fonksiyon
+    // okulu uzatanlar icin harc hesaplayan fonksiyon * overloaded
     public double harcHesapla(int dersSayisi, double uzatmaSuresi) {
         return dersSayisi*20 + uzatmaSuresi*dersSayisi*10;
     }
