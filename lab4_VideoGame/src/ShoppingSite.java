@@ -1,7 +1,7 @@
 public class ShoppingSite {
     public static int totalGameStock;
     private String storeName;
-    private int videoGameCount;
+    private static int videoGameCount;
     private VideoGame[] videoGameList;
 
     public ShoppingSite(String storeName) {
