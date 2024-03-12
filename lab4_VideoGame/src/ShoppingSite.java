@@ -13,7 +13,8 @@ public class ShoppingSite {
     }
 
     public void addVideoGame(VideoGame videoGame){
-        this.videoGameCount++;
         totalGameStock += videoGame.getGameStock();
+        videoGameList[videoGameCount]=videoGame;
+        this.videoGameCount++;
     }
 }
