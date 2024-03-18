@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "VideoGameTest",
+            "request": "launch",
+            "mainClass": "VideoGameTest",
+            "projectName": "universityDemos_4e2c930c"
+        },
+        {
+            "type": "java",
+            "name": "BookStore",
+            "request": "launch",
+            "mainClass": "BookStore",
+            "projectName": "universityDemos_4e2c930c"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "universityDemos_4e2c930c"
+        },
+        {
+            "type": "java",
+            "name": "Run with AppMap",
+            "request": "launch",
+            "mainClass": "",
+            "vmArgs": "-javaagent:${userHome}\\.appmap\\lib\\java\\appmap.jar"
+        }
+    ]
+}

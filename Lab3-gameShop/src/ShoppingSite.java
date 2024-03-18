@@ -15,6 +15,6 @@ public class ShoppingSite {
     public void addVideoGame(VideoGame videoGame){
         totalGameStock += videoGame.getGameStock();
         videoGameList[videoGameCount]=videoGame;
-        this.videoGameCount++;
+        ShoppingSite.videoGameCount++;
     }
 }
