@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Race",
+            "request": "launch",
+            "mainClass": "Race",
+            "projectName": "universityDemos_4e6f1097"
+        },
+        {
+            "type": "java",
             "name": "VideoGameTest",
             "request": "launch",
             "mainClass": "VideoGameTest",
