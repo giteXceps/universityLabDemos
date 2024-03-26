@@ -1,22 +1,20 @@
 public class Race {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
+        Vehicle tesla = new Automobile(0, 200, "Tesla");
+        Vehicle togg = new Automobile(0, 200, "TOGG");
+        Vehicle yamaha = new Motorcycle(0, 200, "Yamaha");
 
         Vehicle[] raceCars = new Vehicle[3];
-
-        Vehicle tesla = new Vehicle(0, 200, "Tesla");
-        Vehicle togg = new Vehicle(0, 200, "Togg");
-        Vehicle yamaha = new Vehicle(0, 180, "Yamaha");
-
         raceCars[0] = tesla;
         raceCars[1] = togg;
         raceCars[2] = yamaha;
 
         int runwayLength = 1000;
 
-        boolean isRaceContinue = true;
+        boolean isRaseContinue = true;
         Vehicle winner = null;
 
-        while (isRaceContinue) {
+        while (isRaseContinue) {
             for (Vehicle vehicle : raceCars) {
                 int randomSpeedAmount = (int) (Math.random() * 30) + 1;
                 vehicle.speedUp(randomSpeedAmount);
@@ -24,21 +22,20 @@ public class Race {
 
                 if (vehicle.getDistance() >= runwayLength) {
                     winner = vehicle;
-                    isRaceContinue = false;
+                    isRaseContinue = false;
                     break;
                 }
             }
-            System.out.println("\n----------------------------\n");
+            System.out.println("------------");
         }
 
-        if (winner instanceof Automobile) {
+        if (winner instanceof Automobile)
             ((Automobile) winner).hornSound();
-        }
 
-        if (winner instanceof Motorcycle) {
+        if (winner instanceof Motorcycle)
             ((Motorcycle) winner).frontLift();
-        }
 
-        System.out.println("Kazanan arac: " + winner.make);
+        System.out.println("Kazanan araç: " + winner.make);
     }
+
 }
