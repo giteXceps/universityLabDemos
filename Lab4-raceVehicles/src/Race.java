@@ -18,7 +18,7 @@ public class Race {
 
         while (isRaceContinue) {
             for (Vehicle vehicle : raceCars) {
-                int randomSpeedAmount = (int) (Math.random() * 30 + 1);
+                int randomSpeedAmount = (int) (Math.random() * 30) + 1;
                 vehicle.speedUp(randomSpeedAmount);
                 vehicle.showSpeed();
 
