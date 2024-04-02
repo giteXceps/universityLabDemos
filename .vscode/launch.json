@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PalindromeChecker",
+            "request": "launch",
+            "mainClass": "PalindromeChecker",
+            "projectName": "universityDemos_4e6f1097"
+        },
+        {
+            "type": "java",
+            "name": "PasswordValidator",
+            "request": "launch",
+            "mainClass": "PasswordValidator",
+            "projectName": "universityDemos_4e6f1097"
+        },
+        {
+            "type": "java",
+            "name": "LongestWords",
+            "request": "launch",
+            "mainClass": "LongestWords",
+            "projectName": "universityDemos_4e6f1097"
+        },
+        {
+            "type": "java",
+            "name": "BirdLanguageConverter",
+            "request": "launch",
+            "mainClass": "BirdLanguageConverter",
+            "projectName": "universityDemos_4e6f1097"
+        },
+        {
+            "type": "java",
+            "name": "SpecialCharacterSeparator",
+            "request": "launch",
+            "mainClass": "SpecialCharacterSeparator",
+            "projectName": "universityDemos_4e6f1097"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "universityDemos_4e6f1097"
+        },
+        {
+            "type": "java",
             "name": "Race",
             "request": "launch",
             "mainClass": "Race",
