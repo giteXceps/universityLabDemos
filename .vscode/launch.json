@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AbstractExample",
+            "request": "launch",
+            "mainClass": "AbstractExample",
+            "projectName": "universityDemos_4e6f1097"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "universityDemos_4e6f1097"
+        },
+        {
+            "type": "java",
             "name": "PalindromeChecker",
             "request": "launch",
             "mainClass": "PalindromeChecker",
