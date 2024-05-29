@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FarmVille",
+            "request": "launch",
+            "mainClass": "FarmVille",
+            "projectName": "universityDemos_4e6f1097"
+        },
+        {
+            "type": "java",
             "name": "AbstractExample",
             "request": "launch",
             "mainClass": "AbstractExample",

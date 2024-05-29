@@ -14,7 +14,7 @@ public class Farm {
     }
 
     public void simulateDay(){
-        System.out.println("Day " + this.day);
+        System.out.println("|-----------------------|" + "DAY " + this.day + "|-----------------------|");
         this.day++;
         if(plants.isEmpty()){
             System.out.println("There is no plant!");
@@ -25,6 +25,5 @@ public class Farm {
                 plant.harvest();
             }
         }
-        System.out.println("-------------------------------------------------\n");
     }
 }

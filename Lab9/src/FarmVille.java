@@ -10,5 +10,6 @@ public class FarmVille {
         farm.simulateDay();
         farm.simulateDay();
         farm.simulateDay();
+        System.out.println("|-----------------------------------------------------|\n");
     }
 }
