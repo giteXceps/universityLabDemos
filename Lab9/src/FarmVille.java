@@ -3,13 +3,14 @@ public class FarmVille {
         Plant tomato = new TomatoPlant();
         Plant carrot = new CarrotPlant();
 
-        Farm farm = new Farm();
-        farm.addPlant(carrot);
-        farm.addPlant(tomato); 
-
-        farm.simulateDay();
-        farm.simulateDay();
-        farm.simulateDay();
-        System.out.println("|-----------------------------------------------------|\n");
+        Farm myFarm = new Farm();
+        myFarm.addPlant(tomato);
+        myFarm.addPlant(carrot);
+    
+        for(int i = 0 ; i < 4 ; i++){
+            System.out.printf("Day %d:\n", i+1);
+            myFarm.simulateDay();
+            System.out.println();
+        }
     }
 }

@@ -3,45 +3,31 @@ public abstract class Plant implements IPlantActions {
     private int growthTime;
     private boolean isHarvestable;
 
-    public Plant(String name, int growthTime) {
+    public Plant (String name, int growthTime){
         this.name = name;
         this.growthTime = growthTime;
         this.isHarvestable = false;
     }
 
-    abstract void grow();
-
-    public String getName() {
-        return name;
+    public void setHarvestable(boolean isHarvestable){
+        this.isHarvestable = isHarvestable;
     }
 
-
-
-    public void setName(String name) {
-        this.name = name;
+    public boolean isHarvestable(){
+        return this.isHarvestable;
     }
 
-
-
-    public int getGrowthTime() {
-        return growthTime;
-    }
-
-
-
-    public void setGrowthTime(int growthTime) {
+    public void setGrowthTime(int growthTime){
         this.growthTime = growthTime;
     }
 
-
-
-    public boolean isHarvestable() {
-        return isHarvestable;
+    public int getGrowthTime(){
+        return growthTime;
     }
 
-
-
-    public void setHarvestable(boolean isHarvestable) {
-        this.isHarvestable = isHarvestable;
+    public String getName(){
+        return name;
     }
+
+    public abstract void grow();
 }
