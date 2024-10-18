@@ -27,14 +27,14 @@ public class SelectionSortApp {
                     minIndex = j;
                 }
             }
-            if (minIndex != 1) {
+            if (minIndex != i) {
                 long temp = dizi[i];
                 dizi[i] = dizi[minIndex];
                 dizi[minIndex] = temp;
             }
         }
 
-        System.out.println("\n Dizinin siralanmis hali yazdiriliyor...");
+        System.out.println("Dizinin siralanmis hali yazdiriliyor...");
         for (int i = 0; i < elemanSayisi; i++) {
             System.out.print(dizi[i] + " ");
         }

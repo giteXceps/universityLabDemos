@@ -1,4 +1,4 @@
-public class BoubleSortApp {
+public class BubbleSortApp {
     public static void main(String[] args) throws Exception {
         long[] dizi = new long[100];
         int elemanSayisi = 10;
