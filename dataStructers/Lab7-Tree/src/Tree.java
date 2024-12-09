@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class Tree {
     private Node root;
 
@@ -217,11 +219,104 @@ public class Tree {
         // -----------Durum 3: Silinecek dugumun hem sag hem sol cocuguda varsa
         // -----------------
         else {
-            // current silinecek dugum, silinecek dugum yerine gececek succesor bul
+            //current silinecek dugum, silinecek dugum yerine gececek succesor bul successor varis dügüm diye gecer
             Node successor = getSuccessor(current);
-            if (current == root) {
+            if (current == root){
                 root = successor;
             }
+        //silinecek parentin sol cocuguysa
+            else if (isLeftChild){
+                parent.leftChild = successor;
+            }
+            //silinecek sag cocuyusa parentin rightchildına successor ata
+            else{
+                parent.rightChild = successor;
+            }
+            //successorin sol cocugu silinen dugumun sol cocugu yap
+            successor.leftChild = current.leftChild;
+            //successor geçici olarak silinecek elemanın yerini alır
+        }
+        return true;
+    }    
+
+    private Node getSuccessor(Node delNode){
+        Node successorParent = delNode;
+        Node successor = delNode;
+        //once silinecek dugum
+        Node current =delNode.rightChild;
+
+        while (current != null){
+            successorParent = successor;
+            successor = current;
+            //sonra surekli sol cocuga git
+            current = current.leftChild;
+        } //sol cocuk null olunca dur successor bulundu
+        //successor sag alt cocugu degilde sag cocugun sol torunuysa
+
+        if (successor!= delNode.rightChild){
+            //successor parent sol cocugunu , successor sag cocugu yap
+            successorParent.leftChild = successor.rightChild;
+            //successor sag cocugunu, silinecek dugumun sag cocugu yap
+            successor.rightChild = delNode.rightChild;
+        }
+        return successor;
+
+        //gecici dugum tutar localstack
+        //o anda işlenecek dugumları tutar globalstack
+        //satırda islenecek veri kalmayana kadar calısacak while
+    }
+
+    public void displayTree(){
+        //Global Stack nesne tipi node
+        Stack<Node> globalStack = new Stack<Node>();
+        //global stack baslangıcı olarak root yerlestirir
+        globalStack.push(root);
+        int nBlanks = 32;
+        boolean isRowEmpty = false;
+
+        while (!isRowEmpty){
+            //localstacck
+            Stack<Node> localStack = new Stack<Node>();
+            //varsayılan deger olarak satir bos diye ata
+            isRowEmpty = true;
+            for (int j = 0; j <nBlanks ; j++) {
+                // 32 karakter bosluk koy
+                System.out.print(' ');
+
+            }
+            while(!globalStack.isEmpty()){
+                Node temp=(Node)globalStack.pop();
+                if(temp != null){
+
+                    System.out.println(temp.data);
+                    localStack.push(temp.leftChild);
+                    localStack.push(temp.rightChild);
+
+                    if (temp.leftChild != null || temp.rightChild !=null){
+                        isRowEmpty = false;
+                    }
+                }
+                else{
+                    //bossa 2 tire ata
+                    System.out.println("--");
+                    localStack.push(null);
+                    localStack.push(null);
+
+                }
+                for (int j = 0; j<nBlanks*2-2 ; j++){
+                    System.out.println(' ');
+
+                }
+                //end while -> globalStack bos degil
+                System.out.println();
+                nBlanks/= 2;
+                while(!localStack.isEmpty()){
+                    globalStack.push(localStack.pop());
+                }
+            } //end while -> isRowEmpty false
+            System.out.println(".....................................................................................");
         }
     }
+    //satır bastan farklıysa calis
+    //yani false oldugunda calis
 }
