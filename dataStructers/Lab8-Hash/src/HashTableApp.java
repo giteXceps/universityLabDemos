@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HashTableApp {
     public static void main(String[] args) {
         DataItem adataItem;
@@ -20,8 +22,8 @@ public class HashTableApp {
             System.out.println("İşlem seçiniz: ");  //value ile degeri tuttun
             System.out.println("Göster(g),Ekle(e),Bul(b),Sil(s),Kapat(k)");
             int choice = getChar();
+            
             switch (choice) {
-
                 case 'g':
                     theHashTable.displayTable();
                     break;
@@ -34,9 +36,52 @@ public class HashTableApp {
                 case'b':
                     System.out.println("Aranacak deger: ");
                     value = getInt();
-                    DataItem found;
-
+                    DataItem found = theHashTable.find(value);
+                    if(found != null){
+                        System.out.println("Bulundu: " + value);
+                        System.out.println("");
+                    }
+                    else{
+                        System.out.println("Bulunamadi");
+                    }
+                    break;
+                case 's':
+                    System.out.println("Silinecek deger: ");
+                    value = getInt();
+                    DataItem didDelete = theHashTable.delete(value);
+                    if(didDelete != null){
+                        System.out.println("Silindi: " + value);
+                    }
+                    else{
+                        System.out.println("Silinemedi!");
+                    }
+                    break;
+                case 'k':
+                    Runtime.getRuntime().exit(0);
+                default:
+                    System.out.println("Hatali giris!");
             }
         }
+    }
+
+    public static String getString(){
+        Scanner input = new Scanner(System.in);
+        //diger kelimeye kadar
+        //giris = "Sivas Cumhuriyet"
+        //cikis = "Sivas"
+        String s = input.next();
+        return s;
+    }
+
+    public static char getChar(){
+        String s = getString();
+        return s.charAt(0);
+    }
+
+    public static int getInt(){
+        //giris almak icin
+        String s = getString();
+        //alinan string bir tamsatita donusturulur
+        return Integer.parseInt(s);
     }
 }

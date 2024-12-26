@@ -14,9 +14,9 @@ public class HashTable {
         System.out.println("Tablo");
         for (int i = 0; i < arraySize; i++) {
             if (hashArray[i] != null) {
-                System.out.println(hashArray[i].getKey() + " ");
+                System.out.print(hashArray[i].getKey() + " ");
             } else {
-                System.out.println("** ");
+                System.out.print("** ");
 
             }
         }
